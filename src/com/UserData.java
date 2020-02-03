@@ -21,6 +21,9 @@ public class UserData {
 		this.UserAge = userAge;
 
 	}
+	public UserData() {
+		
+	}
 
 	public String getUserName() {
 

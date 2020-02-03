@@ -21,7 +21,7 @@ public class GameInstructions {
 
 			inStruction10 = "granade",
 
-			inStruction11 = "Pickedthe granades..\n Now nobody is there is to stop you :P move forward",
+			inStruction11 = "Picked the granades..\n you are inevitable now :P move forward",
 
 			inStruction12 = "stairs",
 
@@ -41,24 +41,24 @@ public class GameInstructions {
 
 			inStruction20 = "sticks",
 
-			inStruction21 = "Amazing the fire has started and the stucks are burning hard.. you can see the zombie coming in your direction from the back side",
+			inStruction21 = "Amazing the fire has started and the sticks are burning hard.. \n you can see the zombie coming in your direction from the back side",
 
-			inStruction22 = "",
+			inStruction22 = "pick up the gun",
 
-			inStruction23 = "",
+			inStruction23 = "that's a perfect shot direct into the head of zombie.. collapse the fire which is attracting the zombies to come near..",
 
-			inStruction24 = "",
+			inStruction24 = "mud",
 
-			inStruction25 = "",
+			inStruction25 = "sucessfully the flames has been stopped..\n search for the veichle at the sorrounding area",
 
-			inStruction26 = "",
+			inStruction26 = "search",
 
-			inStruction27 = "",
+			inStruction27 = "the jeep is located behind the trees. run toward the jeep",
 
-			inStruction28 = "",
+			inStruction28 = "get in",
 
-			inStruction29 = "",
+			inStruction29 = "Start he engine before the zombies sorround you..",
 
-			inStruction30 = "";
+			inStruction30 = "start the engine";
 
 }

@@ -2,32 +2,50 @@ package com;
 
 import java.util.Scanner;
 
-public class Start extends UserData implements Weapons {
+public class Start extends UserData implements Directions {
 
 	Scanner sc = new Scanner(System.in);
 
 	public Start(String userName, String dateOfBirth, String gender, int userAge) {
 
 		super(userName, dateOfBirth, gender, userAge);
-		Begin();
-
-		// TODO Auto-generated constructor stub
+		begin();
 
 	}
+	/*public Start() {
+		
+	}*/
+	
+	public void begin() {
 
-	public void Begin() {
+		
+		System.out.println("Welcome to Zombieland.. \n where do you want move");
+		System.out.println("            ************           ");
+		System.out.println("1.North of Zombieland"+"\n"+"2.South of Zombieland"+"\n"+"3. for more options");
+		int choice = sc.nextInt();
+		if(choice==1)
+		{
+			north();
+		}
+		else if(choice == 2){
+			south();
+		}
+		else if(choice ==3)
+		{
+			System.out.println("1. East of Zombieland"+"\n"+"2.South of Zombieland");
+		}
+		choice = sc.nextInt();
+		if(choice == 1)
+		{
+			east();
+		}
+		else if(choice == 2)
+		{
+			west();
+		}
+		/*System.out.println("please enter your choice");
 
-		System.out.println("you have 3 regions you can move");
-
-		System.out.println("1.North of Jombiland");
-
-		System.out.println("2.South of Jombiland");
-
-		System.out.println("3.West of Jombiland");
-
-		System.out.println("please enter your choice");
-
-		int i = sc.nextInt();
+		
 
 		if (i == 1) {
 
@@ -47,13 +65,13 @@ public class Start extends UserData implements Weapons {
 
 			else if (choice == 2) {
 
-				Missile();
+				Grenade();
 
 			}
 
 			else if (choice == 3) {
 
-				Sword();
+				knife();
 
 			}
 
@@ -67,36 +85,41 @@ public class Start extends UserData implements Weapons {
 
 			System.out.println("You have entered into the west of Jombiland");
 
-		}
+		}*/
 
 	}
 
-	@Override
-
-	public void gun() {
-
-		System.out.println("...");
-
-	}
 
 	@Override
-
-	public void Missile() {
-
+	public void north() {
 		// TODO Auto-generated method stub
-
-		System.out.println("booom..");
-
+		North north = new North();
+		north.begin();
+		
 	}
 
 	@Override
-
-	public void Sword() {
-
+	public void south() {
 		// TODO Auto-generated method stub
+		South south = new South();
+		south.begin();
+		
+	}
 
-		System.out.println("cut into pieces");
+	@Override
+	public void east() {
+		// TODO Auto-generated method stub
+		East east = new East();
+		east.begin();
+		
+	}
 
+	@Override
+	public void west() {
+		// TODO Auto-generated method stub
+		West west = new West();
+		west.begin();
+		
 	}
 
 }
@@ -133,6 +156,10 @@ class Initial {
 
 		Start userdata = new Start(userName, dateOfBirth, gender, userAge);
 
+	}
+	public void playagain()
+	{
+		intialise();
 	}
 
 }

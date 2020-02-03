@@ -6,8 +6,8 @@ public interface Weapons
 
 public void gun();
 
-public void Missile();
+public void Granade();
 
-public void Sword();
+public void knife();
 
 }
