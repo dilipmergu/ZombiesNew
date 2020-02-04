@@ -13,7 +13,7 @@ public class GameInstructions {
 
 			inStruction6 = "gun",
 
-			inStruction7 = "You have picked up a gun..\n see for the ammo",
+			inStruction7 = "You have picked up a gun..",
 
 			inStruction8 = "ammo",
 
@@ -29,9 +29,9 @@ public class GameInstructions {
 
 			inStruction14 = "fire",
 
-			inStruction15 = "Good going the granades are used to kill the zombies.. try to get of the house",
+			inStruction15 = "Good going the granade killed the zombies.. try to get of the house",
 
-			inStruction16 = "jump out of window",
+			inStruction16 = "window",
 
 			inStruction17 = "saved your life from the zombies by jumping out of the window\n that's a great choice",
 
@@ -59,6 +59,11 @@ public class GameInstructions {
 
 			inStruction29 = "Start he engine before the zombies sorround you..",
 
-			inStruction30 = "start the engine";
+			inStruction30 = "proceed",
+			
+			inStruction31 ="sucessfully you have escaped from the zombies",
+			
+			inStruction32 ="You stabbed the zombie with the knife on it's head";
+	
 
 }

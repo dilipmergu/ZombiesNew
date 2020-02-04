@@ -9,6 +9,7 @@ public class Start extends UserData implements Directions {
 	public Start(String userName, String dateOfBirth, String gender, int userAge) {
 
 		super(userName, dateOfBirth, gender, userAge);
+		System.out.println("constructor start");
 		begin();
 
 	}
@@ -33,6 +34,11 @@ public class Start extends UserData implements Directions {
 		else if(choice ==3)
 		{
 			System.out.println("1. East of Zombieland"+"\n"+"2.South of Zombieland");
+		}
+		else
+		{
+			System.out.println("please choose the proper option to proceed further");
+			begin();
 		}
 		choice = sc.nextInt();
 		if(choice == 1)
@@ -88,8 +94,6 @@ public class Start extends UserData implements Directions {
 		}*/
 
 	}
-
-
 	@Override
 	public void north() {
 		// TODO Auto-generated method stub
