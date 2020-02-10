@@ -10,6 +10,6 @@ public void Granade();
 
 public void knife();
 
-public void shoot();
+public void counter();
 
 }

@@ -6,4 +6,5 @@ public interface Directions {
 	public void south();
 	public void east();
 	public void west();
+	public int counter();
 }

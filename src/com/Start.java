@@ -5,17 +5,19 @@ import java.util.Scanner;
 public class Start extends UserData implements Directions {
 
 	Scanner sc = new Scanner(System.in);
+	int counts = 0;
 
 	public Start(String userName, String dateOfBirth, String gender, int userAge) {
 
 		super(userName, dateOfBirth, gender, userAge);
-		System.out.println("constructor start");
 		begin();
 
 	}
-	/*public Start() {
-		
-	}*/
+	
+	  public Start() {
+	  
+	  }
+	 
 	
 	public void begin() {
 
@@ -33,19 +35,21 @@ public class Start extends UserData implements Directions {
 		}
 		else if(choice ==3)
 		{
-			System.out.println("1. East of Zombieland"+"\n"+"2.South of Zombieland");
+			System.out.println("4. East of Zombieland"+"\n"+"5.South of Zombieland");
+			counter();
 		}
 		else
 		{
 			System.out.println("please choose the proper option to proceed further");
+			counter();
 			begin();
 		}
 		choice = sc.nextInt();
-		if(choice == 1)
+		if(choice == 4)
 		{
 			east();
 		}
-		else if(choice == 2)
+		else if(choice == 5)
 		{
 			west();
 		}
@@ -99,6 +103,7 @@ public class Start extends UserData implements Directions {
 		// TODO Auto-generated method stub
 		North north = new North();
 		north.begin();
+		counter();
 		
 	}
 
@@ -107,6 +112,7 @@ public class Start extends UserData implements Directions {
 		// TODO Auto-generated method stub
 		South south = new South();
 		south.begin();
+		counter();
 		
 	}
 
@@ -115,6 +121,7 @@ public class Start extends UserData implements Directions {
 		// TODO Auto-generated method stub
 		East east = new East();
 		east.begin();
+		counter();
 		
 	}
 
@@ -123,7 +130,12 @@ public class Start extends UserData implements Directions {
 		// TODO Auto-generated method stub
 		West west = new West();
 		west.begin();
-		
+		counter();
+	}
+	public int counter()
+	{
+		counts=counts+1;
+		return counts;
 	}
 
 }
@@ -146,7 +158,7 @@ class Initial {
 
 		userName = sc.next();
 
-		System.out.println("Enter the Date of Birth");
+		System.out.println("Enter the Date of Birth with the folowing format dd-mm-yyyy");
 
 		dateOfBirth = sc.next();
 
