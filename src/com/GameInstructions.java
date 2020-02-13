@@ -35,7 +35,7 @@ public class GameInstructions {
 
 			inStruction17 = "saved your life from the zombies by jumping out of the window\n that's a great choice",
 
-			inStruction18 = "run forward",
+			inStruction18 = "forward",
 
 			inStruction19 = "You are moving into the jungle try to be safe it is getting darker..use sticks for fire",
 

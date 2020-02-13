@@ -28,15 +28,18 @@ public class Start extends UserData implements Directions {
 		int choice = sc.nextInt();
 		if(choice==1)
 		{
+			counter();
 			north();
 		}
 		else if(choice == 2){
+			counter();
 			south();
 		}
 		else if(choice ==3)
 		{
 			System.out.println("4. East of Zombieland"+"\n"+"5.South of Zombieland");
 			counter();
+			choice = sc.nextInt();
 		}
 		else
 		{
@@ -44,13 +47,15 @@ public class Start extends UserData implements Directions {
 			counter();
 			begin();
 		}
-		choice = sc.nextInt();
+		//choice = sc.nextInt();
 		if(choice == 4)
 		{
+			counter();
 			east();
 		}
 		else if(choice == 5)
 		{
+			counter();
 			west();
 		}
 		/*System.out.println("please enter your choice");
@@ -98,11 +103,12 @@ public class Start extends UserData implements Directions {
 		}*/
 
 	}
+	
 	@Override
 	public void north() {
 		// TODO Auto-generated method stub
 		North north = new North();
-		north.begin();
+		north.begin(counts);
 		counter();
 		
 	}
@@ -132,50 +138,9 @@ public class Start extends UserData implements Directions {
 		west.begin();
 		counter();
 	}
-	public int counter()
+	public void counter()
 	{
 		counts=counts+1;
-		return counts;
-	}
-
-}
-
-class Initial {
-
-	String userName;
-
-	String dateOfBirth;
-
-	String gender;
-
-	int userAge;
-
-	Scanner sc = new Scanner(System.in);
-
-	public void intialise() {
-
-		System.out.println("Enter the your Name");
-
-		userName = sc.next();
-
-		System.out.println("Enter the Date of Birth with the folowing format dd-mm-yyyy");
-
-		dateOfBirth = sc.next();
-
-		System.out.println("Enter the Gender");
-
-		gender = sc.next();
-
-		System.out.println("Enter the Age");
-
-		userAge = sc.nextInt();
-
-		Start userdata = new Start(userName, dateOfBirth, gender, userAge);
-
-	}
-	public void playagain()
-	{
-		intialise();
 	}
 
 }

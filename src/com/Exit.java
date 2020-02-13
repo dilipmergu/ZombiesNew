@@ -11,6 +11,7 @@ public class Exit {
 		 * total=countn.counter();
 		 */
 		System.out.println("The total number instruction that the user has tried :"+count);
+		
 	}
 
 }

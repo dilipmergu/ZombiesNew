@@ -9,12 +9,11 @@ public class North implements Weapons{
 	Scanner input = new Scanner(System.in);
 	GameInstructions instr = new GameInstructions();
 	Exit exit = new Exit();
-	public void begin()
+	public void begin(int countn)
 	{
-		
 		System.out.println(instr.inStruction1);
-		next();
-		command();		
+		count = count+countn;
+		next();	
 	}
 	public void next()
 	{
