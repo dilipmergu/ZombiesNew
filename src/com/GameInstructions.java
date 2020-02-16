@@ -55,9 +55,9 @@ public class GameInstructions {
 
 			inStruction27 = "the jeep is located behind the trees. run toward the jeep",
 
-			inStruction28 = "get in",
+			inStruction28 = "getin",
 
-			inStruction29 = "Start he engine before the zombies sorround you..",
+			inStruction29 = "Start the engine before the zombies sorround you..",
 
 			inStruction30 = "proceed",
 			

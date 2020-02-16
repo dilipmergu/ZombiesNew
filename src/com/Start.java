@@ -117,7 +117,7 @@ public class Start extends UserData implements Directions {
 	public void south() {
 		// TODO Auto-generated method stub
 		South south = new South();
-		south.begin();
+		south.begin(counts);
 		counter();
 		
 	}
