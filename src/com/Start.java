@@ -1,30 +1,28 @@
 package com;
 
+
+/*
+ * Start class for begining of the game
+ * @param counts to store the number instructions that the user has tried
+ * @param choice for the user input
+ * method north calls the North class
+ * method south calls the south class
+ * method west calls the west class
+ * method counter for incrementing the number of instructions that the user has tried
+*/
 import java.util.Scanner;
 
-public class Start extends UserData implements Directions {
+public class Start implements Directions {
 
 	Scanner sc = new Scanner(System.in);
 	int counts = 0;
-
-	public Start(String userName, String dateOfBirth, String gender, int userAge) {
-
-		super(userName, dateOfBirth, gender, userAge);
-		begin();
-
-	}
-	
-	  public Start() {
-	  
-	  }
-	 
 	
 	public void begin() {
 
 		
-		System.out.println("Welcome to Zombieland.. \n where do you want move");
+		System.out.println("Welcome to Zombieland.. \n where do you want move by choosing the number");
 		System.out.println("            ************           ");
-		System.out.println("1.North of Zombieland"+"\n"+"2.South of Zombieland"+"\n"+"3. for more options");
+		System.out.println("1.North of Zombieland"+"\n"+"2.South of Zombieland"+"\n"+"3.East of zombieland");
 		int choice = sc.nextInt();
 		if(choice==1)
 		{
@@ -35,11 +33,10 @@ public class Start extends UserData implements Directions {
 			counter();
 			south();
 		}
-		else if(choice ==3)
+		else if(choice == 3)
 		{
-			System.out.println("4. East of Zombieland"+"\n"+"5.South of Zombieland");
 			counter();
-			choice = sc.nextInt();
+			east();
 		}
 		else
 		{
@@ -47,60 +44,7 @@ public class Start extends UserData implements Directions {
 			counter();
 			begin();
 		}
-		//choice = sc.nextInt();
-		if(choice == 4)
-		{
-			counter();
-			east();
-		}
-		else if(choice == 5)
-		{
-			counter();
-			west();
-		}
-		/*System.out.println("please enter your choice");
-
 		
-
-		if (i == 1) {
-
-			System.out.println("You have entered into the North of Jombiland");
-
-			System.out.println("you have three weapons to pick and proceed forward");
-
-			System.out.println("1.Gun 2.Sword 3.Granite 4.Missile Launcher");
-
-			int choice = sc.nextInt();
-
-			if (choice == 1) {
-
-				gun();
-
-			}
-
-			else if (choice == 2) {
-
-				Grenade();
-
-			}
-
-			else if (choice == 3) {
-
-				knife();
-
-			}
-
-		}
-
-		else if (i == 2) {
-
-			System.out.println("You have entered into the South of Jombiland");
-
-		} else if (i == 3) {
-
-			System.out.println("You have entered into the west of Jombiland");
-
-		}*/
 
 	}
 	
@@ -108,6 +52,9 @@ public class Start extends UserData implements Directions {
 	public void north() {
 		// TODO Auto-generated method stub
 		North north = new North();
+		System.out.println("         *********         ");
+		System.out.println(" Use the keywords break, knife and gun to pass thorugh the first instructions");
+		System.out.println("         *********        \n ");
 		north.begin(counts);
 		counter();
 		
@@ -117,6 +64,9 @@ public class Start extends UserData implements Directions {
 	public void south() {
 		// TODO Auto-generated method stub
 		South south = new South();
+		System.out.println("         *********         ");
+		System.out.println(" Use the keywords enter, begin and block to pass thorugh the first instructions");
+		System.out.println("         *********         \n");
 		south.begin(counts);
 		counter();
 		
@@ -126,16 +76,8 @@ public class Start extends UserData implements Directions {
 	public void east() {
 		// TODO Auto-generated method stub
 		East east = new East();
-		east.begin();
-		counter();
-		
-	}
-
-	@Override
-	public void west() {
-		// TODO Auto-generated method stub
-		West west = new West();
-		west.begin();
+		System.out.println("\nsmall hint\nUse the keyword 'exit' for ending the game\n\n");
+		east.begin(counts);
 		counter();
 	}
 	public void counter()

@@ -1,11 +1,26 @@
 package com;
 
+/*
+ * The North class is used for obstacles in north direction
+ * @param userinput for user to enter the keyword
+ * @param count is used to store the number tries the user has given
+ * GameInstructions object to fetch the instructions
+ * Exit object to exit from the game
+ * method begin for the start
+ * method next,next* are used to each obstacle
+ * method gun for picking up the gun
+ * method granade for picking granade
+ * method knife to pick up the knife
+ * method counter to increment the count
+ * method command to print the hint 
+*/
+
 import java.util.Scanner;
 
 public class North implements Weapons{
 	
 	String userinput;
-	int count = 0;
+	int count = 1;
 	Scanner input = new Scanner(System.in);
 	GameInstructions instr = new GameInstructions();
 	Exit exit = new Exit();
@@ -13,6 +28,8 @@ public class North implements Weapons{
 	{
 		System.out.println(instr.inStruction1);
 		count = count+countn;
+		
+		System.out.println("\nsmall hint\nUse the keyword 'exit' for ending the game\n\n");
 		next();	
 	}
 	public void next()
@@ -23,6 +40,7 @@ public class North implements Weapons{
 		if(userinput.equals(instr.inStruction2))
 		{
 			System.out.println(instr.inStruction3);
+			knife();
 			command();
 			//userinput = input.next();
 			next1();
@@ -115,6 +133,7 @@ public class North implements Weapons{
 		if(userinput.equals(instr.inStruction10))
 		{
 			Granade();
+			System.out.println(instr.inStruction11);
 			command();
 			//userinput = input.next();
 			next5();
@@ -369,26 +388,26 @@ public class North implements Weapons{
 	@Override
 	public void Granade() {
 		// TODO Auto-generated method stub
-		System.out.println(instr.inStruction11);
+		System.out.println(instr.inStruction11a);
 		
 	}
 
 	@Override
 	public void knife() {
 		// TODO Auto-generated method stub
-		System.out.println(instr.inStruction32);
+		System.out.println(instr.inStruction3a);
 		
 	}
 	@Override
-	public void counter() 
+	/*public void command() 
 	{	
-		count = count+1;
+		
 		//System.out.println(count);
 		//return count;
 		
-	}
+	}*/
 	public void command() {
 		System.out.print("Type your command ::");
-		counter();
+		count = count+1;
 	}
 }

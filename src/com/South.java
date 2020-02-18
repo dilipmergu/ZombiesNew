@@ -1,5 +1,21 @@
 package com;
 
+/*
+ * The south class is used for obstacles in south direction
+ * @param userinput for user to enter the keyword
+ * @param countst is used to store the number tries the user has given
+ * IstructionsSouth object to fetch the instruction
+ * Exit object to exit from the game
+ * method begin for the start
+ * method next,next* are used to each obstacle
+ * method gun for picking up the gun
+ * method granade for picking granade
+ * method knife to pick up the knife
+ * method counter to increment the count
+ * method command to print the hint 
+*/
+
+
 import java.util.Scanner;
 
 public class South implements Weapons{
@@ -13,12 +29,14 @@ public class South implements Weapons{
 	{
 		System.out.println(instr.inStruction1);
 		countst = countst+countn;
+		
 		next();	
 	}
 	public void next()
 	{
 		
-		System.out.println(instr.inStruction2 +" "+instr.inStruction4);
+		System.out.println("hint -->"+instr.inStruction2 +" "+instr.inStruction4);
+		System.out.println("\nsmall hint\nUse the keyword 'exit' for ending the game\n\n");
 		userinput = input.nextLine();
 		//System.out.println("next loop start");
 		if(userinput.equals(instr.inStruction2))
@@ -42,7 +60,7 @@ public class South implements Weapons{
 	public void next1()
 	{
 
-		System.out.println(instr.inStruction4 +" "+instr.inStruction6);
+		System.out.println("hint -->"+instr.inStruction4 +" "+instr.inStruction6);
 		userinput = input.nextLine();
 		//System.out.println("next loop start");
 		if(userinput.equals(instr.inStruction4))
@@ -66,7 +84,7 @@ public class South implements Weapons{
 	public void next2()
 	{
 
-		System.out.println(instr.inStruction8 +" "+instr.inStruction6);
+		System.out.println("hint -->"+instr.inStruction8 +" "+instr.inStruction6);
 		userinput = input.nextLine();
 		//System.out.println("next loop start");
 		if(userinput.equals(instr.inStruction6))
@@ -90,7 +108,7 @@ public class South implements Weapons{
 	public void next3()
 	{
 
-		System.out.println(instr.inStruction8 +" "+instr.inStruction10);
+		System.out.println("hint -->"+instr.inStruction8 +" "+instr.inStruction10);
 		userinput = input.nextLine();
 		//System.out.println("next loop start");
 		if(userinput.equals(instr.inStruction8))
@@ -114,7 +132,7 @@ public class South implements Weapons{
 	public void next4()
 	{
 
-		System.out.println(instr.inStruction12 +" "+instr.inStruction10);
+		System.out.println("hint -->"+instr.inStruction12 +" "+instr.inStruction10);
 		userinput = input.nextLine();
 		//System.out.println("next loop start");
 		if(userinput.equals(instr.inStruction10))
@@ -138,7 +156,7 @@ public class South implements Weapons{
 	public void next5()
 	{
 
-		System.out.println(instr.inStruction8 +" "+instr.inStruction12);
+		System.out.println("hint -->"+instr.inStruction8 +" "+instr.inStruction12);
 		userinput = input.nextLine();
 		//System.out.println("next loop start");
 		if(userinput.equals(instr.inStruction12))
@@ -162,7 +180,7 @@ public class South implements Weapons{
 	public void next6()
 	{
 
-		System.out.println(instr.inStruction14 +" "+instr.inStruction10);
+		System.out.println("hint -->"+instr.inStruction14 +" "+instr.inStruction10);
 		userinput = input.nextLine();
 		//System.out.println("next loop start");
 		if(userinput.equals(instr.inStruction14))
@@ -186,7 +204,7 @@ public class South implements Weapons{
 	public void next7()
 	{
 
-		System.out.println(instr.inStruction12 +" "+instr.inStruction16);
+		System.out.println("hint -->"+instr.inStruction12 +" "+instr.inStruction16);
 		userinput = input.nextLine();
 		//System.out.println("next loop start");
 		if(userinput.equals(instr.inStruction16))
@@ -207,16 +225,15 @@ public class South implements Weapons{
 	{
 		System.out.println(instr.inStruction13);
 	}
-	public void counter() 
+	/*public void counter() 
 	{	
 		countst = countst+1;
 		//System.out.println(count);
 		//return count;
 		
-	}
+	}*/
 	public void command() {
-		System.out.print("Type your command ::");
-		counter();
+		countst = countst+1;
 	}
 	@Override
 	public void Granade() {

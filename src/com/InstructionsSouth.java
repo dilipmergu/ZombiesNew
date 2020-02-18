@@ -1,5 +1,10 @@
 package com;
 
+/*
+ * The game instruction class is used to store all the instructions for south direction
+ * all the odd number are for guessing the keyword that the user needs to be used
+ * even number instructions are the keywords
+*/
 public class InstructionsSouth {
 
 	String  inStruction1 = "Welcome to the cage battle with the Monster Zombie...",

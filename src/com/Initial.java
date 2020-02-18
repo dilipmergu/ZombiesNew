@@ -1,15 +1,20 @@
 package com;
 
-import java.lang.Character.Subset;
+/*
+ * Initial class used to take the basic details of the user by command
+ * method validatedob used to validate the date of birth
+ * method validateage used to validate the age
+ * method validategender to make sure the gender is either male or female
+ * @param userName to store the user name
+ * @param dateOfBirth to store the date of birth of user
+ * @param gender to store gender of the user
+ * @param userAge to age of the user
+*/
 import java.util.Scanner;
 
 class Initial {
 
-	String userName;
-
-	String dateOfBirth;
-
-	String gender;
+	String userName,dateOfBirth,gender;
 
 	int userAge;
 
@@ -39,11 +44,10 @@ class Initial {
 		
 		validateage(userAge);
 
-		Start userdata = new Start(userName, dateOfBirth, gender, userAge);
 
 	}
 	public void validategender(String gender) {
-		if(gender == "male"||gender == "female")
+		if(gender.equals("male")||gender.equals("female"))
 		{
 			
 		}
@@ -64,11 +68,11 @@ class Initial {
 	{
 		if(dob.length()==8)
 		{
-			String dates = dob.substring(0, 1);
+			String dates = dob.substring(0, 2);
 			int date = Integer.parseInt(dates);
-			String datem = dob.substring(2, 3);
+			String datem = dob.substring(2, 4);
 			int month = Integer.parseInt(datem);
-			String datey = dob.substring(4, 7);
+			String datey = dob.substring(4, 8);
 			int year = Integer.parseInt(datey);
 			if(date>=1&&date<=31)
 			{
@@ -90,7 +94,7 @@ class Initial {
 				dateOfBirth = sc.next();
 				validatedob(dateOfBirth);
 			}
-			if(year>=1990&&month<=2010)
+			if(year>=1900&&month<=2010)
 			{
 				
 			}
