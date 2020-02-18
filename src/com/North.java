@@ -26,10 +26,8 @@ public class North implements Weapons{
 	Exit exit = new Exit();
 	public void begin(int countn)
 	{
-		System.out.println(instr.inStruction1);
+		System.out.println(instr.inStruction1+"\n use exit to come out the game");
 		count = count+countn;
-		
-		System.out.println("\nsmall hint\nUse the keyword 'exit' for ending the game\n\n");
 		next();	
 	}
 	public void next()

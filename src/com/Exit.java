@@ -15,7 +15,7 @@ public class Exit {
 	{
 		
 		System.out.println("The total number instruction that the user has tried :"+count);
-		System.out.println("Interested in playing in different direction press 1 to proceed");
+		System.out.println("Interested in playing in different direction press 1 to proceed else 2");
 		flag = input.nextInt();
 		if(flag == 1)
 		{

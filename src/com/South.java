@@ -27,7 +27,7 @@ public class South implements Weapons{
 	Exit exit = new Exit();
 	public void begin(int countn)
 	{
-		System.out.println(instr.inStruction1);
+		System.out.println(instr.inStruction1+"\n use exit to come out the game");
 		countst = countst+countn;
 		
 		next();	
@@ -36,7 +36,6 @@ public class South implements Weapons{
 	{
 		
 		System.out.println("hint -->"+instr.inStruction2 +" "+instr.inStruction4);
-		System.out.println("\nsmall hint\nUse the keyword 'exit' for ending the game\n\n");
 		userinput = input.nextLine();
 		//System.out.println("next loop start");
 		if(userinput.equals(instr.inStruction2))
